@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 {% load static %}
-<body background="https://wallpaperaccess.com/full/1426870.png">
+<body background="https://wallpaperbat.com/img/370797-data-science-wallpaper-top-free-data-science-background.jpg">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"></a>
         <span class="navbar-toggler-icon"></span>
@@ -34,22 +34,23 @@
         </div>
     </nav>
     {% block content %}
-    <div class="card mb-3" style="margin: 50px;">
-        <img src="{% static 'Profile_pic.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">This is my online resume</h5>
-        <p class="card-text">My name is Pablo Segovia and I actually made this web app using Django.</p>
-        <p class="card-text"><small class="text-muted">Django is only one of my skills...</small></p>
+    <div class="card bg-dark text-white">
+        <img src="https://th.bing.com/th/id/R.361270dc0eaf06ffae6b09520264218b?rik=meQyGSLcETu2aQ&pid=ImgRaw&r=0" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        <h5 class="card-title">Hello! My name is Pablo</h5>
+        <p class="card-text">I made this whole web app using Django.</p>
+        <p class="card-text">Of course, Django is only one of my skills...</p>
+        </div>
     </div>
-    <br>
+    
     <div class="card text-center">
         <div class="card-header">
-        Featured
+        Blog
         </div>
         <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">In the blog page, you could find my publications</h5>
+        <p class="card-text">Something about Django, Data Science, Machine Learning</p>
+        <a href="{% url 'blog' %}" class="btn btn-primary">Go to Blog</a>
         </div>
         <div class="card-footer text-muted">
         2 days ago
