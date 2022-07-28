@@ -17,47 +17,70 @@
             <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-            </li>
+                <a class="nav-link" href="{% url 'about' %}">About me</a>
+                </li>
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
             
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
         </div>
     </nav>
     {% block content %}
     <div class="card bg-dark text-white">
-        <img src="https://th.bing.com/th/id/R.361270dc0eaf06ffae6b09520264218b?rik=meQyGSLcETu2aQ&pid=ImgRaw&r=0" class="card-img" alt="...">
+        {% load static %}
+        <img src="{% static 'img\profile.png' %}" class="card-img" alt="...">
         <div class="card-img-overlay">
         <h5 class="card-title">Hello! My name is Pablo</h5>
         <p class="card-text">I made this whole web app using Django.</p>
         <p class="card-text">Of course, Django is only one of my skills...</p>
         </div>
     </div>
-    
     <div class="card text-center">
-        <div class="card-header">
+        <div class="card-header bg-warning text-dark">
+        About me
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">If you want to check my skills</h5>
+        <p class="card-text">Surelly you can step on this page</p>
+        <a href="{% url 'about' %}" class="btn btn-primary bg-warning text-dark">Go to About me</a>
+        </div>
+        <div class="card-footer text-muted">
+        keep going down...
+        </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-header bg-danger text-light">
         Blog
         </div>
         <div class="card-body">
         <h5 class="card-title">In the blog page, you could find my publications</h5>
         <p class="card-text">Something about Django, Data Science, Machine Learning</p>
-        <a href="{% url 'blog' %}" class="btn btn-primary">Go to Blog</a>
+        <a href="{% url 'blog' %}" class="btn btn-danger bg-danger text-light">Go to Blog</a>
         </div>
         <div class="card-footer text-muted">
-        2 days ago
+        keep going down...
         </div>
     </div>
     
 
+    <div class="card text-center">
+        <div class="card-header bg-success text-light">
+        Contact
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">If you want to reach me out</h5>
+        <p class="card-text">Find my LinkedIn, GitHub, Kaggle</p>
+        <a href="{% url 'contact' %}" class="btn btn-secondary bg-success text-light">Go to Contact</a>
+        </div>
+        <div class="card-footer text-muted">
+        I hope you've enjoyed :)
+        </div>
+    </div>
     {% endblock %}
 
 
