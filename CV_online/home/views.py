@@ -13,6 +13,6 @@ def blog(request):
     context = {}
     return render(request, 'blog.html', context=context)
 
-def home(request):
+def contact(request):
     context = {}
-    return render(request, 'home.html', context=context)
+    return render(request, 'contact.html', context=context)
